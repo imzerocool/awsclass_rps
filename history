@@ -1,0 +1,388 @@
+    1  ifconfig 
+    2  ping google.com
+    3  aws show configuration
+    4  aws configure show
+    5  aws configure list
+    6  aws s3 ls
+    7  aws help
+    8  aws s3 help
+    9  aws configure
+   10  aws
+   11  aws configure list
+   12  aws s3 ls
+   13  cat ~/.aws/config 
+   14  cat ~/.aws/credentials 
+   15  ifconfig 
+   16  aws s3 mb s3://maheshrhcss-rps/test1
+   17  aws s3 ls
+   18  aws s3 ls s3://maheshrhcss-rps
+   19  aws s3 ls s3://maheshrhcss-rps/
+   20  aws s3 mb s3://maheshrhcss-rps-1
+   21  aws s3 ls
+   22  sudo pip install boto3
+   23  python s3.py 
+   24  vim s3.py 
+   25  python s3.py 
+   26  vim s3-create.py
+   27  python s3-create.py raja
+   28  vim s3-create.py 
+   29  python s3-create.py raja
+   30  python s3-create.py test-bucket
+   31  ls -la
+   32  vim s3-create.py 
+   33  python s3-create.py test-bucket
+   34  vim s3-create.py 
+   35  python s3-create.py test-bucket
+   36  vim s3.template
+   37  vim s3template.yaml
+   38  vim s3-create.py 
+   39  sudo pip install update awscli
+   40  AWSTemplateFormatVersion: 2010-09-09
+   41  Parameters:
+   42    BucketName:
+   43      Description: Name of S3 Bucket
+   44      Type: String
+   45    BucketName2:
+   46      Description: Name of S3 Bucket
+   47      Type: String
+   48    BucketName3:
+   49      Description: Name of S3 Bucket
+   50      Type: String
+   51  Resources:
+   52    S3Bucket:
+   53      Type: 'AWS::S3::Bucket'
+   54      Properties:
+   55        BucketName:
+   56          Ref: BucketName
+   57    S3Bucket2:
+   58      Type: 'AWS::S3::Bucket'
+   59      Properties:
+   60        BucketName:
+   61          Ref: BucketName2
+   62    S3Bucket3:
+   63      Type: 'AWS::S3::Bucket'
+   64      Properties:
+   65        BucketName:
+   66          Ref: BucketName3
+   67  Outputs:
+   68    S3BucketName:
+   69  aws s3 cp s3template.yaml s3://
+   70  aws s3 cp s3template.yaml s3://maheshrhcss-rps
+   71  aws cloudformation create-stack --stack-name STACKNAME --template-body file://s3template.yaml --parameters ParameterKey=BucketName,ParameterValue=maheshrhcss-rps
+   72  aws cloudformation create-stack --stack-name STACKNAME --template-body file://s3template.yaml --parameters ParameterKey=BucketName,ParameterValue=maheshrhcss-rps-cmd1 ParameterKey=BucketName2,ParameterValue=maheshrhcss-rps-cmd2 ParameterKey=BucketName3,ParameterValue=maheshrhcss-rps-cmd3
+   73  aws cloudformation delete-stack --stack-name STACKNAME --template-body file://s3template.yaml --parameters ParameterKey=BucketName,ParameterValue=maheshrhcss-rps-cmd1 ParameterKey=BucketName2,ParameterValue=maheshrhcss-rps-cmd2 ParameterKey=BucketName3,ParameterValue=maheshrhcss-rps-cmd3
+   74  aws cloudformation delete-stack --stack-name STACKNAME
+   75  python s3-create.py 
+   76  python s3-create.py name1234mahesh
+   77  python s3-create.py maheshrhcss-boto3-1
+   78  vim s3-create.py 
+   79  python s3-create.py maheshrhcss-boto3-1
+   80  vim s3-create.py 
+   81  python s3-create.py mahes
+   82  python s3-create.py
+   83  yum install epel-release
+   84  sudo su
+   85  sudo yum install -y ansible
+   86  ansible
+   87  ansible hosts
+   88  ansible hosts hostname
+   89  pwd
+   90  ls -l
+   91  cd ..
+   92  ls -l
+   93  pwd
+   94  ls -l
+   95  cd environment/
+   96  ls -l
+   97  pwd
+   98  chmod 600 webserver.pem 
+   99  sudo vi /etc/ansible/ansible.cfg 
+  100  ansible -i webhosts ping webservers
+  101  ansible -i webhosts -m  ping webservers
+  102  ansible-playbook -i webhosts  webser.yaml 
+  103  python s3-create.py 
+  104  git
+  105  ls -la
+  106  git clone https://github.com/imzerocool/awsclassmmyt.git
+  107  ll
+  108  cp -p s3-create.py s3.py  s3template.yaml  webhosts  webserver.pem  webser.yaml  awsclassmmyt/
+  109  ls -l
+  110  ls -l awsclassmmyt/
+  111  cp -p README.md awsclassmmyt/
+  112  ls -l
+  113  ls -l awsclassmmyt/
+  114  ls -l awsclassmmyt/ |wc -l
+  115  ls -l |wc -l
+  116  cd awsclassmmyt/
+  117  ls -l
+  118  ls -la
+  119  git add --all
+  120  git commit -am "first day of class"
+  121  git push origin master
+  122  git log
+  123  git checkout -b day2 cda65beb037522059a0b7bcdc1d83cd95fa7d6fa
+  124  git branch
+  125  ls -la
+  126  cd
+  127  ls -l
+  128  cd environment/
+  129  ls -l
+  130  rm -rf awsclassmmyt/
+  131  git clone https://github.com/imzerocool/awsclassmmyt.git
+  132  ls -l
+  133  cd awsclassmmyt/
+  134  git branch
+  135  git log
+  136  git checkout -b day1 cda65beb037522059a0b7bcdc1d83cd95fa7d6fa
+  137  git add -all
+  138  git commit -am "First Day of AWS class"
+  139  git push origin day1
+  140  cd
+  141  cd environment/
+  142  aws ec2 attach-internet-gateway --vpc-id "vpc-08c1fb87ce24527a6" --internet-gateway-id "igw-0d5496b70ea2a8047" --region us-east-1
+  143  ll
+  144  ssh -i webserver.pem  ec2-user@18.233.159.3
+  145  ls -l
+  146  vim webser.yaml 
+  147  vim webhosts 
+  148  history |grep ansible
+  149  ansible -i webhosts  ping webservers
+  150  history |grep ansible
+  151  ansible -i webhosts  -m ping webservers
+  152  ansible-playbook -i webhosts webser.yaml 
+  153  ssh -i webserver.pem  ec2-user@34.230.5.134
+  154  ssh -i webserver.pem  ec2-user@18.233.159.3
+  155  sudo yum install -y telnet nslookup
+  156  telnet 10.0.0.84
+  157  telnet 10.0.0.84 22
+  158  ssh -i webserver.pem  ec2-user@18.233.159.3
+  159  ansible -i webhosts  -m ping webservers
+  160  dig
+  161  dig -x maheshsharma.ga
+  162  dig  maheshsharma.ga
+  163  nslookup maheshsharma.ga
+  164  dig  maheshsharma.ga
+  165  dig ns  maheshsharma.ga
+  166  ansible -i webhosts  -m ping webservers
+  167  ansible-playbook -i webhosts webser.yaml 
+  168  ls -l
+  169  git clone  https://git-codecommit.us-east-1.amazonaws.com/v1/repos/AwsD-L
+  170  ls -l
+  171  cd AwsD-L/
+  172  ls -la
+  173  export AWS_ACCESS_KEY_ID=AKIA2LD3IBSUEZNO7757
+  174  export fPX8QGZkGEuXpwXAq3cLl6pzyujyZOXgFEiNYG8H
+  175  export AWS_SECRET_ACCESS_KEY=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
+  176  ls -la
+  177  git branch -a
+  178  sudo pip install boto boto3 botocore
+  179  sudo pip install --upgrade pip
+  180  sudo pip install boto boto3 botocore
+  181  sudo /usr/local/bin/pip install boto boto3 botocore
+  182  cd aws-final/
+  183  cd roles/
+  184  cd
+  185  cd A
+  186  cd environment/AwsD-L/
+  187  cd aws-final/
+  188  ansible-playbook -e ansible_python_interpreter=/usr/bin/python network.yml
+  189  ifconfig 
+  190  curl http://169.254.169.254
+  191  curl http://169.254.169.254/latest/meta-data
+  192  curl http://169.254.169.254/latest/meta-data/
+  193  curl http://169.254.169.254/latest/meta-data/mac/
+  194  curl http://169.254.169.254/latest/meta-data/
+  195  cd
+  196  cd environment/
+  197  ssh -i webser.yaml  ec2-user@mahesh.maheshsharma.ga
+  198  ls -l
+  199  ssh -i webserver.pem  ec2-user@mahesh.maheshsharma.ga
+  200  > /home/ec2-user/.ssh/known_hosts 
+  201  vimchmo +x ec2update.sh 
+  202  chmod +x ec2update.sh 
+  203  bash -x ec2update.sh 
+  204  hisrt
+  205  history 
+  206  cat /etc/fstab 
+  207  ssh -i webserver.pem  ec2-user@mahesh.maheshsharma.ga
+  208  > /home/ec2-user/.ssh/known_hosts 
+  209  vim ec2update.sh 
+  210  ls -l
+  211  cp -p ec2update.sh  awsclassmmyt/
+  212  ls -la
+  213  cp -rv AwsD-L/* awsclassmmyt/
+  214  ls -la
+  215  cd awsclassmmyt/
+  216  git log
+  217  git checkout -b day3 #!/bin/bash
+  218  sudo yum install -y lvm2
+  219  sudo yum install -y httpd git
+  220  git checkout -b day3 cda65beb037522059a0b7bcdc1d83cd95fa7d6fa
+  221  git branch
+  222  git add -all
+  223  git add --all
+  224  git commit -am "day3 class"
+  225  git push origin awsclassmmyt
+  226  git push origin day3
+  227  ssh -i webserver.pem  ec2-user@mahesh.maheshsharma.ga
+  228  ssh -i webserver.pem  ec2-user@m1.maheshsharma.ga
+  229  ssh -i webserver.pem  ec2-user@m2.maheshsharma.ga
+  230  ssh -i webserver.pem  ec2-user@54.242.61.147
+  231  ssh -i webserver.pem  ec2-user@m2.maheshsharma.ga
+  232  > /home/ec2-user/.ssh/known_hosts 
+  233  vi on-fly-snapshot-vol.sh
+  234  git add --all
+  235  git commit -am "day3 class second commit"
+  236  git push origin day3
+  237  ls -la
+  238  git branch
+  239  ssh -i webserver.pem  ec2-user@m2.maheshsharma.ga
+  240  cd ..
+  241  cd awsclassmmyt/
+  242  cd ..
+  243  vim webhosts 
+  244  ansible -i webhosts  -m ping webservers
+  245  ssh -i webserver.pem  ec2-user@m1.maheshsharma.ga
+  246  ansible-playbook -i webhosts webser.yaml 
+  247  ifconfig 
+  248  sudo yum install -y nfs-utils
+  249  sudo mkdir /efs
+  250  sudo mount -t efs fsmt-ff6075b7 /efs/
+  251  mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-1a722751.efs.us-east-1.amazonaws.com:/ /efs/
+  252  mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-1a722751.efs.us-east-1.amazonaws.com:/ /efs 
+  253  sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-1a722751.efs.us-east-1.amazonaws.com:/ /efs 
+  254  ssh -i webserver.pem  ec2-user@m1.maheshsharma.ga
+  255  ssh -i webserver.pem  ec2-user@m2.maheshsharma.ga
+  256  > /home/ec2-user/.ssh/known_hosts 
+  257  ssh -i webserver.pem  ec2-user@m2.maheshsharma.ga
+  258  ssh -i webserver.pem  ec2-user@m1.maheshsharma.ga
+  259  ssh -i webserver.pem  ec2-user@m2.maheshsharma.ga
+  260  ls -l
+  261  cd awsclassmmyt/
+  262  git log
+  263  git status
+  264  git checkout -b day4 68df248ba9d552347f19cc6ad90ed404e0cd943f
+  265  wget 68df248ba9d552347f19cc6ad90ed404e0cd943f
+  266  wget https://s3.amazonaws.com/bucketonetemp/AWS+course-20180922T044651Z-001.zip
+  267  ll
+  268  wget https://s3.amazonaws.com/bucketonetemp/AWS+course-20180922T044651Z-001.zip
+  269  ll
+  270  git add --all
+  271  git commit -am "day4 class gc-doc 2nd commit"
+  272  git push origin day4
+  273  git push -f origin day4
+  274  git status
+  275  git branch
+  276  ls -la
+  277  git add --all
+  278  git status
+  279  git commit -am "day4 class gc-doc 2nd commit"
+  280  git status
+  281  git push -f origin day4
+  282  mkdir aws-docs
+  283  mv AWS+course-20180922T044651Z-001.zip  aws-docs/
+  284  cd aws-docs/
+  285  ls -l
+  286  unzip AWS+course-20180922T044651Z-001.zip 
+  287  ls -l
+  288  rm -rf AWS+course-20180922T044651Z-001.zip 
+  289  mv AWS\ course/ AWS-course
+  290  cd ..
+  291  git add --all
+  292  git commit -am "day4 class gc-doc 2nd commit"
+  293  git push  origin day4
+  294  cd aws-docs/AWS-course/
+  295  ls -l
+  296  mkdir aws-study
+  297  mv AWS\ Study\ Guide\ and\ Hands\ on.zip  aws-study/
+  298  cd aws-study/-stu
+  299  cd aws-study/
+  300  ls -l
+  301  unzip AWS\ Study\ Guide\ and\ Hands\ on.zip 
+  302  ls -l
+  303  cd
+  304  cd environment/awsclassmmyt/
+  305  ls -l
+  306  git add --all
+  307  git commit -am "day4 class gc-doc 2nd commit"
+  308  git push  origin day4
+  309  cd aws-docs/AWS-course/aws-study/
+  310  ls -l
+  311  cd ..
+  312  ls -l
+  313  cd aws-study/
+  314  ls -l
+  315  yum install mysql
+  316  su root
+  317  ls -l
+  318  cd awsclassmmyt/
+  319  ls -l
+  320  git log
+  321  git checkout -b tempbra 6ea8c40db6bcc9635c08fd7470aa7e9e52211454
+  322  git branch
+  323  ls -l
+  324  ls -la
+  325  git add --all
+  326  git commit -am "day4 class gc-doc 2nd commit"
+  327  git push origin tempbra
+  328  ls -la
+  329  cd aws-docs/
+  330  ls -l
+  331  cd AWS-course/
+  332  ls -l
+  333  cd aws-study/
+  334  cd
+  335  cd awsc
+  336  cd environment/awsclassmmyt/
+  337  ls -l
+  338  ls -la
+  339  cd
+  340  cd environment/
+  341  git clone https://github.com/imzerocool/awsclass_rps.git
+  342  ls -l
+  343  cp -p -rv awsclassmmyt/* awsclass_rps/
+  344  cd awsclass_rps/
+  345  ls -l
+  346  find . -type f -name '*.zip'
+  347  mv ./aws-docs/AWS-course/aws-study/AWS\ Study\ Guide\ and\ Hands\ on.zip  ./aws-docs/AWS-course/aws-study/AWS-study.zip
+  348  find . -type f -name '*.zip'
+  349  git add --all
+  350  git add .
+  351  git commit -am "Last classt commit with docs"
+  352  git push origin master
+  353  ls -la
+  354  mv AwsD-L/ oldcode-AwsDL
+  355  ll
+  356  history |grep clone
+  357  git clone  https://git-codecommit.us-east-1.amazonaws.com/v1/repos/AwsD-L
+  358  ls -l
+  359  ccd AwsD-L/
+  360  ls -l
+  361  cd AwsD-L/
+  362  ls -l
+  363  cd aws-final/
+  364  ls -l
+  365  cat webserver.pem
+  366  cd AwsD-L/aws-final/roles/amiinstance/
+  367  ls -l
+  368  cd files
+  369  ls -l
+  370  chmod 600 webkey.pem 
+  371  cd
+  372  cd environment/
+  373  ls -l
+  374  cd awsclass_
+  375  cd awsclass_rps/
+  376  ls -la
+  377  git branch
+  378  git branch -a
+  379  git log
+  380  git checkout -b last_day
+  381  git branch
+  382  ls -la
+  383  mkdir ansible-cf
+  384  mv * ansible-cf/
+  385  ls -l
+  386  ls -l ansible-cf/
+  387  ls -l
+  388  history > history
