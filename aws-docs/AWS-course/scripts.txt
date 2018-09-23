@@ -1,0 +1,23 @@
+Frontend
+===================
+yum -y install php-gd php php-mysql httpd git
+git clone https://github.com/mohanraz81/threetier.git
+cp -R threetier/frontend/* /var/www/html
+sed -i 's/enforcing/disabled/g' /etc/selinux/config
+systemctl start httpd
+systemctl enable httpd
+echo -e "setenv BACKENDLB backendlbname" >> /etc/httpd/conf/aws.conf
+
+Backend
+====================
+yum -y install php-gd php php-mysql httpd git
+git clone https://github.com/mohanraz81/threetier.git
+cp -R threetier/backend/* /var/www/html
+sed -i 's/enforcing/disabled/g' /etc/selinux/config
+systemctl start httpd
+systemctl enable httpd
+echo -e "setenv MY_DB_NAME test\nsetenv MY_DB_USER test\nsetenv MY_DB_PASS test\nsetenv MY_DB_HOST test" >> /etc/httpd/conf/aws.conf
+
+
+
+ 
